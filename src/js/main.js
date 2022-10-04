@@ -45,7 +45,7 @@ jQuery.validator.addMethod(
 
 var element = document.getElementById("imask-phone");
 var maskOptions = {
-  placeholder: "+{7}(000)000-00-00",
+  placeholder: "+{0}(000)000-00-00",
   mask: "+{0}(000)000-00-00",
 };
 var mask = IMask(element, maskOptions);
