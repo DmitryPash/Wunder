@@ -36,7 +36,8 @@
     gap: 30px;
     margin-bottom: 30px;
     &-padding {
-        padding-left: 100px;
+        position: relative;
+        left: 100px;
     }
   }
   &-item {
@@ -450,7 +451,9 @@
   form .error {
     color: #ff0000;
   }
-  
+  .swiper-slide {
+    width: auto !important;
+  }
 .about-swiper {
     position: relative;
  }
@@ -461,5 +464,11 @@
 }
   .swiper-scrollbar-drag {
     background: #0099B5 !important;
+  }
+
+  .about-items-wrap {
+    width: 100px;
+    height: 100%;
+    opacity: 0;
   }
   
