@@ -1,0 +1,13 @@
+.header {
+    padding: 35px 0px;
+    margin-bottom: 20px;
+    &-link {
+        text-transform: uppercase;
+        border-bottom: 1px solid $linkColor;
+        transition: 0.3s ease;
+        height: fit-content;
+        &:hover {
+            border-bottom: 1px solid transparent;
+        }
+    }
+}

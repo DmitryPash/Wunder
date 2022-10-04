@@ -3,10 +3,14 @@
 @import "./base/typography.scss";
 @import "./base/grid.scss";
 @import "./base/mixin.scss";
+@import "./base/ui.scss";
+
 
 /* layout */
 @import "./layout/inc-header.scss";
 @import "./layout/inc-footer.scss";
+@import "./layout/inc-accordion.scss";
+
 
 /* pages */
 @import "index";
@@ -34,8 +38,12 @@ body {
   font-weight: 400;
   font-size: rem(16px);
   line-height: 1.42;
-  color: #000;
-  background-color: #fff;
+  letter-spacing: 0.03em;
+  color: $blackColor;
+  // background-color: #fff;
+  background-image: url(../images/bg/mainbg.png);
+  background-repeat: repeat;
+  background-size: contain;
 }
 
 #wrapper {
