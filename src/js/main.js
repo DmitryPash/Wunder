@@ -8,7 +8,7 @@ $(".accordion-item").click(function () {
 
 
 $(function () {
-  $("#test").validate({
+  $("#callbackform").validate({
     rules: {
       
       email: {
