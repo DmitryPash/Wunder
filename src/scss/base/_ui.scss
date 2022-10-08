@@ -2,9 +2,8 @@
   display: block;
   width: 100%;
   font-weight: 700;
-  @include adaptiv-font(45, 36);
+  @include adaptiv-font(45, 32);
   line-height: 68px;
-  // font-size: rem(45);
   margin-bottom: 50px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -13,6 +12,13 @@
     display: block;
     color: $linkColor;
   }
+   @media(max-width:576px) {
+          line-height: 50px;
+          margin-bottom: 40px;
+      }
+       @media(max-width:400px) {
+              margin-bottom: 30px;
+          }
 }
 
 .ui-btn {
@@ -40,7 +46,13 @@
   }
   @media (max-width: 768px) {
     font-size: rem(22);
+    height: 85px;
+    line-height: 85px;
   }
+   @media(max-width:576px) {
+          height: 75px;
+          line-height: 75px;
+      }
   @media (max-width: 400px) {
     font-size: rem(20);
 
