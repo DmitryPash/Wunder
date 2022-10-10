@@ -549,60 +549,10 @@ form .error {
   padding-top: 7px;
   resize: none;
 }
-//   .about-items-wrap {
-//     width: 100px;
-//     height: 100%;
-//     opacity: 0;
-//   }
-.about-items-grid {
-  display: grid;
-  grid-template-columns: repeat(20, 1fr);
-  gap: 30px;
-  grid-auto-rows: minmax(100px, auto);
-  grid-template-areas:
-    "q q q w w w e e e r r r t t t c c c c c"
-    "z z a a a s s s d d d f f f  g g g x x x";
-}
-.item-hide-1 {
-  grid-area: z;
-}
-.item-hide-2 {
-  grid-area: c;
-}
-.item-hide-2 {
-  grid-area: x;
-}
-.item1 {
-  grid-area: q;
-}
-.item2 {
-  grid-area: w;
-}
-.item3 {
-  grid-area: e;
-}
-.item4 {
-  grid-area: r;
-}
-.item5 {
-  grid-area: t;
-}
-.item6 {
-  grid-area: a;
-}
-.item7 {
-  grid-area: s;
-}
-.item8 {
-  grid-area: d;
-}
-.item9 {
-  grid-area: f;
-}
-.item10 {
-  grid-area: g;
-}
 
+.swiper-free-mode>.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
 
 .swiper-slide:nth-child(odd) .about-item:last-child {
     margin-left: 100px;
@@ -616,15 +566,5 @@ form .error {
     margin-left: -100px;
 
 }
-// .swiper-slide .about-item:nth-child(2n){
-//     margin-left: 100px;
-// }
 
-// .swiper-slide {
-//     position: relative;
-//     right: 100px;
-// }
-// .swiper-slide:first-child {
-//     right: 0;
-// }
 

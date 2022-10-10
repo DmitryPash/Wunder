@@ -57,10 +57,20 @@ var swiper = new Swiper(".mySwiper", {
   direction: "horizontal",
   slidesPerView: "auto",
   freeMode: true,
+  loop: true,
+  autoplay: {
+    delay: 1,
+    disableOnInteraction: false
+  },
+  slidesPerView: 'auto',
+  speed: 9000,
+  grabCursor: true,
+  mousewheelControl: true,
+  keyboardControl: true,
   scrollbar: {
     el: ".swiper-scrollbar",
   },
-  mousewheel: true,
+  // mousewheel: true,
 });
 
 
@@ -84,3 +94,4 @@ jQuery(document).ready(function ($){
   elasticArea();
   // END JS
   });
+
