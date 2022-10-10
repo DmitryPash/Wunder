@@ -45,8 +45,8 @@ jQuery.validator.addMethod(
 
 var element = document.getElementById("imask-phone");
 var maskOptions = {
-  placeholder: "+{0}(000)000-00-00",
-  mask: "+{0}(000)000-00-00",
+  placeholder: "+{000}(00)000-00-00",
+  mask: "+{375}(00)000-00-00",
 };
 var mask = IMask(element, maskOptions);
 
@@ -63,3 +63,24 @@ var swiper = new Swiper(".mySwiper", {
   mousewheel: true,
 });
 
+
+//Resize textarea
+jQuery(document).ready(function ($){
+  // Start JS
+    function elasticArea() {
+      $('.callback-textarea').each(function(index, element) {
+         var elasticElement = element,
+            $elasticElement = $(element),
+            initialHeight = initialHeight || $elasticElement.height(),
+            delta = parseInt( $elasticElement.css('paddingBottom') ) + parseInt( $elasticElement.css('paddingTop') ) || 0,
+            resize = function() {
+              $elasticElement.height(initialHeight);
+              $elasticElement.height( elasticElement.scrollHeight - delta );
+          };
+        $elasticElement.on('input change keyup', resize);
+        resize();
+      });
+    };
+  elasticArea();
+  // END JS
+  });

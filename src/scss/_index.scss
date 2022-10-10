@@ -118,6 +118,7 @@
         }
     }
     &-text {
+      display: inline-block;
       color: $linkColor;
       margin-bottom: 40px;
       height: 45px;
@@ -546,6 +547,7 @@ form .error {
 }
 .callback-textarea {
   padding-top: 7px;
+  resize: none;
 }
 //   .about-items-wrap {
 //     width: 100px;
