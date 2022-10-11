@@ -449,7 +449,19 @@
       padding-top: 58px;
       background-size: contain;
       @media (max-width: 1024px) {
+        padding-top: 48px;
+      }
+      @media (max-width: 900px) {
         padding-top: 44px;
+      }
+      @media (max-width: 770px) {
+        padding-top: 40px;
+      }
+      @media (max-width: 650px) {
+        padding-top: 35px;
+      }
+      @media (max-width: 578px) {
+        padding-top: 38px;
       }
        @media(max-width:400px) {
               padding-top: 38px;

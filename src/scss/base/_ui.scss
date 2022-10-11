@@ -2,7 +2,8 @@
   display: block;
   width: 100%;
   font-weight: 700;
-  @include adaptiv-font(45, 32);
+  // @include adaptiv-font(45, 32);
+  font-size: rem(45);
   line-height: 68px;
   margin-bottom: 50px;
   letter-spacing: 0.05em;
@@ -12,6 +13,9 @@
     display: block;
     color: $linkColor;
   }
+   @media(max-width:1024px) {
+       font-size: clamp(20px, 20px + 2vw, 45px)
+      }
    @media(max-width:576px) {
           line-height: 50px;
           margin-bottom: 40px;
