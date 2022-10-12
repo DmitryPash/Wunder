@@ -1,6 +1,7 @@
 .header {
     padding: 35px 0px;
     margin-bottom: 20px;
+    gap: 40px;
     &-link {
         text-transform: uppercase;
         border-bottom: 1px solid $linkColor;
@@ -9,6 +10,9 @@
          @media(max-width:400px) {
                 font-size: rem(14);
             }
+             @media(max-width:360px) {
+                    text-align: right;
+                }
         &:hover {
             border-bottom: 1px solid transparent;
         }

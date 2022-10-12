@@ -53,7 +53,7 @@ var mask = IMask(element, maskOptions);
 
 
 var swiper = new Swiper(".mySwiper", {
-  spaceBetween: 30,
+  spaceBetween: 15,
   direction: "horizontal",
   slidesPerView: "auto",
   freeMode: true,
@@ -70,6 +70,11 @@ var swiper = new Swiper(".mySwiper", {
   scrollbar: {
     el: ".swiper-scrollbar",
   },
+  breakpoints: {
+    400: {
+      spaceBetween: 30
+    }
+  }
   // mousewheel: true,
 });
 
@@ -94,4 +99,6 @@ jQuery(document).ready(function ($){
   elasticArea();
   // END JS
   });
+
+
 

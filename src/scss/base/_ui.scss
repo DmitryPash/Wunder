@@ -4,7 +4,7 @@
   font-weight: 700;
   // @include adaptiv-font(45, 32);
   font-size: rem(45);
-  line-height: 68px;
+  line-height: 1.5;
   margin-bottom: 50px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -22,6 +22,7 @@
       }
        @media(max-width:400px) {
               margin-bottom: 30px;
+              line-height: 1.6;
           }
 }
 
