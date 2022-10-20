@@ -269,7 +269,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-
+    margin-bottom: 30px;
     &-input {
       width: calc(100% - 170px);
       height: 100%;
@@ -606,3 +606,43 @@ form .error {
 }
 
 
+// calculator
+
+.count-info {
+  display: none;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+  opacity: 0;
+}
+.count-info.show {
+  opacity: 1;
+  display: flex;
+}
+.discount {
+  font-weight: 500;
+  height: 31px;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-self: center;
+  text-align: center;
+  color: #ddae20;
+  padding-bottom: 10px;
+}
+.amount {
+  font-size: 41px;
+  line-height: 45px;
+  align-self: center;
+  text-align: center;
+  color: #ffffff;
+}
+.sum-text {
+  font-size: 18px !important;
+  line-height: 21px;
+  align-self: center;
+  text-align: center;
+  padding: 0 10px 25px 10px;
+  color: #ffffff;
+
+}

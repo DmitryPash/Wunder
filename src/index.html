@@ -213,18 +213,21 @@
     </div>
   </div>
   <div class="service">
+    
     <div class="container">
       <div class="service-title ui-title">
         Вы можете самостоятельно рассчитать свой рекламный бюджет С помощью
         <span>калькулятора зачислений</span>
       </div>
-      <div class="service-items">
+      <div class="service-items radio-box">
         <div class="service-subtitle">Выберите услугу</div>
         <div class="row justify-center">
           <div class="col-md-2 col-sm-3 col-xs-4 col-ss-6">
             <div class="service-item">
               <input type="radio" id="serviceChoice1" name="service" />
-              <label for="serviceChoice1" class="question-label">
+              <label for="serviceChoice1" class="question-label logo-service active" data-commission="0" data-min_amount="200"
+						  data-amount_for_discount_1="2001" data-commission_1="0" data-discount_1="5"
+						  data-amount_for_discount_2="10001" data-commission_2="0" data-discount_2="10">
                 <img
                 loading="lazy"
                   src="./images/icon/vk.svg"
@@ -237,7 +240,9 @@
           <div class="col-md-2 col-sm-3 col-xs-4 col-ss-6">
             <div class="service-item">
               <input type="radio" id="serviceChoice2" name="service" />
-              <label for="serviceChoice2" class="question-label">
+              <label for="serviceChoice2" class="question-label logo-service" data-commission="0" data-min_amount="200"
+              data-amount_for_discount_1="2001" data-commission_1="0" data-discount_1="5"
+              data-amount_for_discount_2="10001" data-commission_2="0" data-discount_2="8">
                 <img
                 loading="lazy"
                   src="./images/icon/my.svg"
@@ -250,7 +255,9 @@
           <div class="col-md-2 col-sm-3 col-xs-4 col-ss-6">
             <div class="service-item">
               <input type="radio" id="serviceChoice3" name="service" />
-              <label for="serviceChoice3" class="question-label">
+              <label for="serviceChoice3" class="question-label logo-service" data-commission="13" data-min_amount="200"
+              data-amount_for_discount_1="2001" data-commission_1="10" data-discount_1="0"
+              data-amount_for_discount_2="10001" data-commission_2="8" data-discount_2="0">
                 <img
                 loading="lazy"
                   src="./images/icon/faceInst.svg"
@@ -263,7 +270,9 @@
           <div class="col-md-2 col-sm-3 col-xs-4 col-ss-6">
             <div class="service-item">
               <input type="radio" id="serviceChoice4" name="service" />
-              <label for="serviceChoice4" class="question-label">
+              <label for="serviceChoice4" class="question-label logo-service" data-commission="10" data-min_amount="200"
+              data-amount_for_discount_1="2001" data-commission_1="7" data-discount_1="0"
+              data-amount_for_discount_2="10001" data-commission_2="5" data-discount_2="0">
                 <img
                 loading="lazy"
                   src="./images/icon/google.svg"
@@ -276,7 +285,7 @@
           <div class="col-md-2 col-sm-3 col-xs-4 col-ss-6">
             <div class="service-item">
               <input type="radio" id="serviceChoice5" name="service" />
-              <label for="serviceChoice5" class="question-label">
+              <label for="serviceChoice5" class="question-label logo-service" data-commission="0" data-min_amount="200">
                 <img
                 loading="lazy"
                   src="./images/icon/yandex.svg"
@@ -289,7 +298,7 @@
           <div class="col-md-2 col-sm-3 col-xs-4 col-ss-6">
             <div class="service-item">
               <input type="radio" id="serviceChoice6" name="service" />
-              <label for="serviceChoice6" class="question-label">
+              <label for="serviceChoice6" class="question-label logo-service tiktok" data-commission="15" data-min_amount="0">
                 <img
                 loading="lazy"
                   src="./images/icon/tiktok.svg"
@@ -302,17 +311,42 @@
         </div>
       </div>
       <div class="service-subtitle">Введите сумму</div>
-      <form class="service-calc">
-        <div class="service-calc-input-wrap">
-          <input
-            type="text"
-            class="service-calc-input"
-            placeholder="Минимум 200"
-          />
-          <div class="service-calc-input-price">BYN</div>
-        </div>
-        <button class="service-calc-btn ui-btn">Рассчитать</button>
-      </form>
+      <div class="service-calc">
+        <form class="service-calc-input-wrap sum-input" id="sum-input">
+       
+            <input type="hidden" id="discount-input" value="0">
+            <input type="hidden" id="commission-input" value="0">
+            <input
+              type="number"
+              class="service-calc-input"
+              placeholder="Минимум 200"
+              id="input-num"
+               min="200"
+            />
+            <div class="service-calc-input-price">BYN</div>
+         
+        </form>
+      <button class="service-calc-btn ui-btn button-count" id="button-count">Рассчитать</button>
+      </div>
+      
+      <div class="count-info">
+        <span class="sum-text">Ваше зачисление с НДС</span>
+        <span class="amount">-- BYN </span>
+        <span class="discount"></span>
+      </div>
+      <!-- <div class="calc">
+				<form class="sum-input" id="sum-input">
+					<input type="hidden" id="discount-input" value="0">
+					<input type="hidden" id="commission-input" value="0">
+					<input type="number" id="input-num" min="200" placeholder="минимум 200"><span>BYN</span>
+				</form>
+				<div class="count-info">
+					<span class="sum-text">Ваше зачисление с НДС</span>
+					<span class="amount">-- BYN </span>
+					<span class="discount"></span>
+				</div>
+			</div>
+            <span class="button-count" id="button-count">рассчитать</span> -->
     </div>
   </div>
   <div class="documentdwnld">
