@@ -156,6 +156,7 @@ var nds = 20;
 					return;
 				} else {
 					elem.addClass('error');
+
 				}
 			}
 
