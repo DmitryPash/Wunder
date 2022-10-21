@@ -284,17 +284,17 @@
         width: calc(100% - 115px);
       }
       &:hover {
-        border: 5px solid #ff0000;
+        border: 5px solid #0099b5;
       }
       &::placeholder {
         color: #757575;
       }
       &:active,
       &:focus {
-        outline: 5px solid #ff0000;
+        outline: 5px solid #0099b5;
         outline-offset: -5px;
         z-index: 2;
-        
+       
         &-wrap {
           &::after {
             background-color: red;
@@ -315,20 +315,7 @@
         @media (max-width: 576px) {
           height: 75px;
         }
-        // &::after {
-        //     z-index: 1;
-        //     content: 'BYN';
-        //     position: absolute;
-        //     right: 0;
-        //     height: 100%;
-        //     width: 100%;
-        //     max-width: 170px;
-        //     background-color: #d9d9d9;
-        //     text-align: center;
-        //     line-height: 90px;
-        //     font-size: rem(18);
-        //     font-weight: 700;
-        // }
+
       }
       &-price {
         position: absolute;
@@ -568,6 +555,10 @@
 
 form .error {
   color: #ff0000;
+}
+form .service-calc-input.error {
+  border: 5px solid #910010;
+  color: #000;
 }
 .swiper-slide {
   width: auto !important;

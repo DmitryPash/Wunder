@@ -194,6 +194,7 @@ var nds = 20;
 					$('.count-info').addClass("show");
 					$('#count-form').addClass("show");
 				} else {
+          $('.count-info').removeClass("show");
 					console.log("error");
 				}
 			}
@@ -234,3 +235,4 @@ var nds = 20;
 				get_data();
 				go_count();
 			});
+
