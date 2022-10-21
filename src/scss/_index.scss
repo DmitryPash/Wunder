@@ -284,16 +284,17 @@
         width: calc(100% - 115px);
       }
       &:hover {
-        border: 5px solid #0099b5;
+        border: 5px solid #ff0000;
       }
       &::placeholder {
-        color: $blackColor;
+        color: #757575;
       }
       &:active,
       &:focus {
-        outline: 5px solid #0099b5;
+        outline: 5px solid #ff0000;
         outline-offset: -5px;
         z-index: 2;
+        
         &-wrap {
           &::after {
             background-color: red;
