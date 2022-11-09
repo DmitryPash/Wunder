@@ -14,7 +14,7 @@
     color: $linkColor;
   }
    @media(max-width:1024px) {
-       font-size: clamp(20px, 20px + 2vw, 45px)
+       font-size: clamp(20px, 20px + 2vw, 45px) !important;
       }
    @media(max-width:576px) {
           line-height: 50px;
@@ -36,6 +36,8 @@
   padding: 0px 20px;
   font-weight: 700;
   font-size: rem(26);
+  font-family: Jost,sans-serif;
+
   color: #fff;
   text-align: center;
   cursor: pointer;

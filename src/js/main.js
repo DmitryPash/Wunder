@@ -237,3 +237,13 @@ var nds = 20;
 				go_count();
 			});
 
+let headerFix = document.querySelector('.header');
+let wrapperFix = document.querySelector('.wrapper')
+let scrollpos = window.pageYOffset
+
+console.log(headerFix.clientHeight)
+wrapperFix.style.paddingTop = 25 + headerFix.clientHeight + 'px'
+
+window.addEventListener('scroll', () => {
+	// headerFix.classList.add('header-fixed');
+})
