@@ -22,12 +22,15 @@ $(function () {
         required: true,
        lettersonly: true,
       },
+	  customCheckbox: {
+		required: true,
+	  }
     },
     messages: {
       name: "Введите свое имя",
       email: "Введите ваш email",
       phone: "Введите ваш номер телефона",
-
+	  customCheckbox: 'Подтвердите ваше согласие с условиями'
     },
     submitHandler: function (form) {
       form.submit();
@@ -241,9 +244,5 @@ let headerFix = document.querySelector('.header');
 let wrapperFix = document.querySelector('.wrapper')
 let scrollpos = window.pageYOffset
 
-console.log(headerFix.clientHeight)
 wrapperFix.style.paddingTop = 25 + headerFix.clientHeight + 'px'
 
-window.addEventListener('scroll', () => {
-	// headerFix.classList.add('header-fixed');
-})
