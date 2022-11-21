@@ -81,6 +81,39 @@ var swiper = new Swiper(".mySwiper", {
   // mousewheel: true,
 });
 
+var swiper = new Swiper(".swiperClient", {
+	spaceBetween: 15,
+	direction: "horizontal",
+	slidesPerView: 2,
+	freeMode: true,
+	loop: true,
+	autoplay: {
+	  delay: 1,
+	  disableOnInteraction: false
+	},
+	speed: 9000,
+	grabCursor: true,
+	mousewheelControl: true,
+	keyboardControl: true,
+	// scrollbar: {
+	//   el: ".swiper-scrollbar",
+	// },
+	breakpoints: {
+	  400: {
+		spaceBetween: 30
+	  },
+	  768: {
+		slidesPerView: 3,
+
+	  },
+	  1024: {
+		slidesPerView: 4,
+
+	  }
+	}
+	// mousewheel: true,
+  });
+  
 
 //Resize textarea
 jQuery(document).ready(function ($){

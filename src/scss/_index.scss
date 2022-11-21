@@ -222,9 +222,7 @@
     }
     .row {
       row-gap: 30px;
-       @media(max-width:576px) {
-              row-gap: 15px;
-          }
+
     }
 
     input,
@@ -233,7 +231,7 @@
     }
 
     input[type="radio"]:checked + .question-label {
-      border: 5px solid #0099b5;
+      border: 5px solid #910010;
       color: #3c50e0;
     }
 
@@ -257,25 +255,57 @@
     position: relative;
     height: 100px;
     background-color: #fff;
-    border-radius: 2px;
     text-align: center;
     transition: 0.3s ease all;
     border-radius: 2px;
+    
     cursor: pointer;
-
+     @media(max-width:1024px) {
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+        }
+    &:hover {
+      border-bottom-left-radius: 0px;
+       border-bottom-right-radius: 0px;
+      .service-item-footer {
+        display: block;
+      }
+    }
      @media(max-width:576px) {
             height: 75px;
         }
-    
+    &-footer {
+      position: absolute;
+      top: 100%;
+      font-weight: 600;
+      font-size: fz(18);
+      background-color: #910010;
+      display: none;
+      height: 20px;
+      width: 100%;
+      border: 2px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 0px 10px;
+      color: #fff;
+       @media(max-width:1024px) {
+              display: block;
+          }
+      &-red {
+        color: #fff;
+        background-color: #910010;
+      }
+      &-blue {
+        color: #fff;
+        background-color: #3c50e0;
+      }
+    }
     &-img {
-      // position: absolute;
-      // transform: translate(-50%, -50%);
-      // top: 50%;
-      // left: 50%;
       padding: 10px;
       max-height: 70px;
-      width: 100%;
-      height: 70px;
       filter: grayscale(100%);
     }
   }
@@ -299,14 +329,14 @@
         width: calc(100% - 115px);
       }
       &:hover {
-        border: 5px solid #0099b5;
+        border: 5px solid #910010;
       }
       &::placeholder {
         color: #757575;
       }
       &:active,
       &:focus {
-        outline: 5px solid #0099b5;
+        outline: 5px solid #910010;
         outline-offset: -5px;
         z-index: 2;
        
@@ -517,8 +547,11 @@
       filter: grayscale(1);
       max-height: 100px;
     }
-   
+    &-column {
+      max-width: 270px;
+    }
   }
+  
 }
 
 .question {
@@ -587,43 +620,54 @@ form .service-calc-input.error {
   border: 5px solid #910010;
   color: #000;
 }
-.swiper-slide {
-  width: auto !important;
-}
 .about-swiper {
   position: relative;
 }
-.swiper-scrollbar {
-  max-width: 370px;
-  bottom: -40px !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
+.mySwiper {
+  .swiper-slide {
+    width: auto !important;
+  }
+  .swiper-scrollbar {
+    max-width: 370px;
+    bottom: -40px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  .swiper-scrollbar-drag {
+    background: #0099b5 !important;
+  }
+  .callback-textarea {
+    padding-top: 7px;
+    resize: none;
+  }
+  
+  .swiper-free-mode>.swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
+  
+  .swiper-slide:nth-child(odd) .about-item:last-child {
+      margin-left: 100px;
+  
+  }
+  .swiper-slide:nth-child(even) .about-item:first-child {
+      margin-left: -100px;
+  
+  }
+  .swiper-slide:nth-child(odd) {
+      margin-left: -100px;
+  
+  }
 }
-.swiper-scrollbar-drag {
-  background: #0099b5 !important;
-}
-.callback-textarea {
-  padding-top: 7px;
-  resize: none;
+.swiperClient {
+  // overflow: hidden; 
+  img {
+    filter: grayscale(0);
+  }
 }
 
-.swiper-free-mode>.swiper-wrapper {
+.swiper-free-mode > .swiper-wrapper {
   transition-timing-function: linear !important;
 }
-
-.swiper-slide:nth-child(odd) .about-item:last-child {
-    margin-left: 100px;
-
-}
-.swiper-slide:nth-child(even) .about-item:first-child {
-    margin-left: -100px;
-
-}
-.swiper-slide:nth-child(odd) {
-    margin-left: -100px;
-
-}
-
 
 // calculator
 
@@ -841,3 +885,7 @@ input[type="number"]{
           font-size: 12px;
       }
 }
+
+
+
+
