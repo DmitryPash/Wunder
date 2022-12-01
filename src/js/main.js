@@ -221,17 +221,21 @@ var nds = 20;
 
 					var sum_discount = (inp / 100) * discount;
 
-					var total = inp + sum_commission - sum_discount;
+					// var total = inp + sum_commission - sum_discount;
+
+					var total = inp - sum_commission + sum_discount;
+
 
 					var sum_nds = (total / 100) * nds;
 
-					var am = total + sum_nds;
+					// var am = total + sum_nds;
+					var am = total;
 					//console.log('итого ' + am);
 					$('.amount').text((Math.ceil(am * 100) / 100).toLocaleString('ru-RU') + ' BYN');
 					$('.count-info').addClass("show");
 					$('#count-form').addClass("show");
 				} else {
-          $('.count-info').removeClass("show");
+          			$('.count-info').removeClass("show");
 					console.log("error");
 				}
 			}
@@ -252,7 +256,9 @@ var nds = 20;
 					//console.log('Сумма без НДС: ' + am);
 					var sum_nds = (am / 100) * nds;
 					//console.log('сумма ндс ' + sum_nds);
-					var am_nds = am + sum_nds;
+					// var am_nds = am + sum_nds;
+					var am_nds = am;
+
 					//console.log('Сумма с НДС: ' + am_nds);
 					$('.amount').text((Math.ceil(am_nds * 100) / 100).toLocaleString('ru-RU') + ' BYN');
 					$('.count-info').addClass("show");
